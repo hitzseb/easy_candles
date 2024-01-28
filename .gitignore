@@ -1,3 +1,7 @@
+migrations/
+core/data_collector.py
+core/cedears_tracker.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

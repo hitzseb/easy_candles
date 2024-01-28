@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<section class="container-fluid">
+    <div class="container text-center my-4">
+        <h2>{{ stock.ticker }} - {{ stock.name }}</h3>
+
+        <div class="my-4">
+            <p class="lead">Scan result: match for <span class="text-secondary">{{ result.pattern }}</span> pattern
+                    on <span class="text-secondary">{{ result.date }}</span>.</p>
+            {% if result.forecast == 'bearish reversal' %}
+                <p class="lead">Forecast: <span class="text-danger">{{ result.forecast }}</span>.</p>
+            {% endif %}
+            {% if result.forecast == 'bullish reversal' %}
+                <p class="lead">Forecast: <span class="text-success">{{ result.forecast }}</span>.</p>
+            {% endif %}
+            {% if result.forecast == 'lack of determination' %}
+                <p class="lead">Forecast: <span class="text-warning">{{ result.forecast }}</span>.</p>
+            {% endif %}
+        </div>
+
+        <div class="my-5" id="plotly-chart">{{ chart|safe }}</div>
+    </div>
+</section>
+
+{% endblock %}

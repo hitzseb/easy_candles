@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<header class="bg-primary bg-gradient text-white py-5">
+    <div class="container px-4 text-center my-5 py-5">
+        <h1 class="fw-bolder">Welcome to Easy Candles</h1>
+        <p class="lead">The easy candlestick scanner for your favorite stocks.</p>
+        <a class="btn btn-lg btn-secondary" href="{% url 'stocks' %}">Try out!</a>
+    </div>
+</header>
+
+<section class="bg-dark bg-gradient py-5" id="about">
+    <div class="container px-4">
+        <div class="row gx-4 justify-content-center my-5 py-5">
+            <div class="col-lg-8">
+                <h2>About Easy Candles</h2>
+                <p class="lead">Easy Candles is a platform dedicated to technical analysis, specifically focused on candlestick patterns in the stock market. Our platform allows users to analyze the most important stocks, providing insights into the latest detected candlestick patterns and associated forecasts.</p>
+                <p>Please note that Easy Candles does not provide financial advice. The information presented is for educational and informational purposes only.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5" id="terms">
+    <div class="container px-4">
+        <div class="row gx-4 justify-content-center my-5 py-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="mb-4">Terms of Use</h2>
+                <p class="lead">
+                  By using Easy Candles, you agree to the following terms and conditions:
+                </p>
+                <ul>
+                  <li>This platform is for educational purposes only.</li>
+                  <li>Easy Candles does not provide financial advice.</li>
+                  <li>Users are responsible for their investment decisions.</li>
+                  <li>Any forecasts or analyses presented are not guaranteed.</li>
+                </ul>
+              </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
