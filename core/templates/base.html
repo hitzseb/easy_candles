@@ -9,42 +9,34 @@
   <title>Easy Candles</title>
   {% load static %}
   <link rel="icon" href="{% static 'img/icon.webp' %}" type="image/x-icon">
-  <link href="https://bootswatch.com/5/lux/bootstrap.min.css" rel="stylesheet">
+  <link href="https://bootswatch.com/5/cyborg/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-info py-3" aria-label="Offcanvas navbar large">
+  <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
     <div class="container">
       <a class="navbar-brand fs-4 fw-bold ps-3 align-middle" href="{% url 'home' %}">
         Easy Candles
         </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
-        aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar2"
-        aria-labelledby="offcanvasNavbar2Label">
-        <div class="offcanvas-header">
-          <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas"
-            aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link fs-5" href="{% url 'home' %}">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fs-5" href="{% url 'home' %}#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fs-5" href="{% url 'home' %}#terms">Terms</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fs-5" href="{% url 'stocks' %}">Stocks</a>
-            </li>
-          </ul>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link fs-5" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5" href="{% url 'home' %}#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5" href="{% url 'home' %}#terms">Terms</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5" href="{% url 'stocks' %}">Stocks</a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
