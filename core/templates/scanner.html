@@ -9,8 +9,8 @@
         <h2>{{ stock.ticker }} - {{ stock.name }}</h3>
 
         <div class="my-4">
-            <p class="lead">Scan result: match for <span class="text-secondary">{{ result.pattern }}</span> pattern
-                    on <span class="text-secondary">{{ result.date }}</span>.</p>
+            <p class="lead">Scan result: match for <span class="text-info">{{ result.pattern }}</span> pattern
+                    on <span class="text-info">{{ result.date }}</span>.</p>
             {% if result.forecast == 'bearish reversal' %}
                 <p class="lead">Forecast: <span class="text-danger">{{ result.forecast }}</span>.</p>
             {% endif %}

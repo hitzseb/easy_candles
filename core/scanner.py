@@ -4,13 +4,15 @@ import plotly.graph_objs as go
 import pandas as pd
 
 def getData(symbol):
-    df = yf.download(symbol)
+    today = pd.to_datetime('today')
+    one_month_ago = today - pd.DateOffset(months=1)
+    df = yf.download(symbol, one_month_ago, today) 
     return df
 
 def make_chart(df, symbol, date):
     date = pd.to_datetime(date)
 
-    start_date = date - pd.DateOffset(days=7)
+    start_date = date - pd.DateOffset(days=30)
     end_date = pd.to_datetime('today')
 
     df_filtered = df[(df.index >= start_date) & (df.index <= end_date)]
